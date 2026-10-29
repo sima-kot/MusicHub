@@ -1,4 +1,5 @@
-﻿using MusicHub.Api.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using MusicHub.Api.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace MusicHub.Api.Dtos
@@ -13,5 +14,12 @@ namespace MusicHub.Api.Dtos
        int? DurationSeconds,
        TrackStatus Status,
        DateTime CreatedAtUtc);
-    
 }
+
+        
+
+
+
+
+
+

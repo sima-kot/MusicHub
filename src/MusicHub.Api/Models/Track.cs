@@ -1,4 +1,6 @@
-﻿namespace MusicHub.Api.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MusicHub.Api.Models
 {
     public enum TrackStatus
     {
@@ -9,6 +11,7 @@
 
     public class Track
     {
+        [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Title { get; set; } = string.Empty;
         public string? Artist { get; set; }

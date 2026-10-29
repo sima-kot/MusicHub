@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MusicHub.Api.Data;
+using MusicHub.Api.Interfaces;
+using MusicHub.Api.Services;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,7 @@ builder.Services.AddDbContext<AppDbContext>(o =>
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+builder.Services.AddTransient<ITrackService, TrackService>();
 
 var app = builder.Build();
 
